@@ -1,0 +1,115 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+auto ask_user_for_integer(std::string const prompt) -> int
+{
+	if(not prompt.empty())
+	{
+		std::cout << prompt;
+	}
+	auto value = std::string{};
+	std::getline(std::cin, value);
+	return std::stoi(value);
+}
+
+auto main() -> int
+
+{
+    //zadanie 1.0.0.1
+	std::cout << "Mariusz Chwaszczynski\n";
+	std::cout << "\npress enter to continue to the next exercise...";
+	getchar();
+	system("CLS");
+
+
+	//zadanie 1.0.0.2
+	int a,b;
+    std::cout <<   "{a} +  b  = x\n";
+	a = ask_user_for_integer("Enter value a: ");
+	system("CLS");
+	std::cout << " "<<a<<"  + {b} = x\n";
+	b = ask_user_for_integer("Enter value b: ");
+	system("CLS");
+	std::cout << " "<<a<<"  +  "<<b<<"  = " << a+b;
+	std::cout << "\npress enter to continue to the next exercise...";
+	getchar();
+	system("CLS");
+
+
+	//zadanie 1.0.0.3
+	std::cout <<"{a} *  b  = x\n";
+	a = ask_user_for_integer("Enter value a: ");
+	system("CLS");
+	std::cout << " "<<a<<"  * {b} = x\n";
+	b = ask_user_for_integer("Enter value b: ");
+	system("CLS");
+	std::cout << " "<<a<<"  *  "<<b<<"  = " << a*b;
+    std::cout << "\npress enter to continue to the next exercise...";
+	getchar();
+	system("CLS");
+
+
+
+    //zadanie 1.0.0.4
+    std::cout <<"{a}  (>/<)   b\n";
+	a = ask_user_for_integer("Enter value a: ");
+	system("CLS");
+	std::cout << " "<<a<<"   (>/<)  {b}\n";
+	b = ask_user_for_integer("Enter value b: ");
+	system("CLS");
+	if(a>b)std::cout << " "<<a;
+	else if(a<b)std::cout <<"             "<<b;
+	else std::cout << " "<<a<<"     =     "<<b;
+	std::cout << "\npress enter to continue to the next exercise...";
+	getchar();
+	system("CLS");
+
+
+	//zadanie 1.0.0.5
+	std::cout <<"|a| = ?\n";
+	a = ask_user_for_integer("Enter value a: ");
+	system("CLS");
+	std::cout << "|"<<a<<"| = "<<abs(a);
+	std::cout << "\npress enter to continue to the next exercise...";
+	getchar();
+	system("CLS");
+
+
+	//zadanie 1.0.0.6
+	std::cout <<"{a}  ?   b\n";
+	a = ask_user_for_integer("Enter value a: ");
+	system("CLS");
+	std::cout << " "<<a<<"   ?  {b}\n";
+	b = ask_user_for_integer("Enter value b: ");
+	system("CLS");
+	if(a>b)std::cout <<" "<<a<<"   >   "<<b;
+	else if(a<b)std::cout <<" "<<a<<"   <   "<<b;
+	else std::cout << " "<<a<<"   =   "<<b;
+	std::cout << "\npress enter to continue to the next exercise...";
+	getchar();
+	system("CLS");
+
+
+	//zadanie 1.0.0.7
+	std::cout <<"|a| * x = a\n";
+	a = ask_user_for_integer("Enter value a: ");
+	system("CLS");
+	if(a>0)std::cout <<"|"<<a<<"| * 1 = "<<a;
+	else if(a<0)std::cout <<"|"<<a<<"| * -1 = "<<a;
+	else std::cout <<"|"<<a<<"| * 0 = "<<a;
+	std::cout << "\npress enter to continue to the next exercise...";
+	getchar();
+	system("CLS");
+
+
+	//zadanie 1.0.0.8
+	int biggest, c;
+	a = ask_user_for_integer("Enter value a: ");
+	b = ask_user_for_integer("Enter value b: ");
+	c = ask_user_for_integer("Enter value c: ");
+	biggest = a;
+	if(biggest<b)biggest = b;
+	if(biggest<c)biggest = c;
+	std::cout<<"largest value: " << biggest;
+	return 0;
+}
